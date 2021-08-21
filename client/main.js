@@ -19,7 +19,7 @@ const displayCallback = (res) => {
     const trashIcon = document.createElement("img")
 
     nameElement.innerHTML = billsArr[i].name
-    amountElement.innerHTML = +billsArr[i].amount
+    amountElement.innerHTML = `$${+billsArr[i].amount}`
     trashIcon.setAttribute("src", "assets/trash_can.svg")
     trashIcon.classList.add("trashIcon")
     trashIcon.id = +billsArr[i].id
