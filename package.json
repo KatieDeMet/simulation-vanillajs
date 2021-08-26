@@ -2,9 +2,10 @@
   "name": "simulation-vanillajs",
   "version": "1.0.0",
   "description": "<img src=\"https://s3.amazonaws.com/devmountain/readme-logo.png\" width=\"250\" align=\"right\">",
-  "main": "client/main.js",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",

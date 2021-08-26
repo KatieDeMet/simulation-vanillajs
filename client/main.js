@@ -1,9 +1,7 @@
-// const { default: axios } = require("axios");
-
 const form = document.querySelector('form')
 const expenses = document.getElementById("expenses");
 const budgetTotalBox = document.getElementById("budgetTotal");
-const baseURL = "http://localhost:7777/api/users";
+// const baseURL = "";
 let id = 0;
 
 const displayCallback = (res) => {
@@ -58,7 +56,7 @@ function addBill(e) {
 
     id++
 
-    axios.post(baseURL, billObj)
+    axios.post("/api/users", billObj)
       .then(displayCallback)
      .catch(err => console.log(err))
   
@@ -69,7 +67,7 @@ function addBill(e) {
 
 let removeItem = (e) => {
   let imgID = +e.target.id
-  axios.delete(`${baseURL}/${imgID}`)
+  axios.delete(`/api/users/${imgID}`)
     .then(displayCallback)
     .catch(err => console.log(err))
 }
